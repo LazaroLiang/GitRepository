@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
     <!--import other spring xml configuration-->
     <!--<import resource="DataSource.xml"></import>-->
@@ -20,14 +22,25 @@
     <bean id="user" class="cn.xidian.edu.Dao.User"></bean>
     <bean id="personInfo" class="cn.xidian.edu.Dao.PersonInfo"></bean>
     <bean id="userImpl" class="cn.xidian.edu.DaoImpl.UserImpl">
-        <!--<property name="connection" ref="dbConnection"></property>-->
         <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <bean id="userService" class="cn.xidian.edu.Service.UserService">
+        <property name="userImpl" ref="userImpl"/>
     </bean>
 
     <bean id="dbConnection" class="cn.xidian.edu.Dao.DBConnection">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
     <context:component-scan base-package="cn.xidian.edu.*" />
+
+    <!--configure transaction manage-->
+    <!--step 1 configure transaction manager-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--step 2 start annotation transaction-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
 
 
