@@ -3,7 +3,7 @@
 * date:2017.11.08
 * funtion:
 * */
-package cn.xidian.edu.Dao;
+package cn.xidian.edu.Bean;
 
 public class PersonInfo {
 //    person_id int(12) not null primary key AUTO_INCREMENT,

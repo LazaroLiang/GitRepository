@@ -3,7 +3,7 @@
 * date:2017.11.08
 * function:user object class
 * */
-package cn.xidian.edu.Dao;
+package cn.xidian.edu.Bean;
 
 public class User {
 //    user_id int not null primary key,
@@ -45,5 +45,10 @@ public class User {
 
     public void setUser_password(String user_password) {
         this.user_password = user_password;
+    }
+
+    @Override
+    public String toString(){
+        return "[ "+this.user_name+" "+this.user_password+" ]";
     }
 }

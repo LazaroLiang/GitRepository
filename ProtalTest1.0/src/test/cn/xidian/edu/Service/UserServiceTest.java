@@ -1,6 +1,6 @@
 package test.cn.xidian.edu.Service; 
 
-import cn.xidian.edu.Dao.User;
+import cn.xidian.edu.Bean.User;
 import cn.xidian.edu.Service.UserService;
 import org.junit.Test;
 import org.junit.Before; 
@@ -20,7 +20,7 @@ public class UserServiceTest {
     ApplicationContext context;
 @Before
 public void before() throws Exception {
-    context=new ClassPathXmlApplicationContext("file:C:\\Users\\I342400\\Documents\\My Received Files\\ProtalTest1.0\\web\\WEB-INF\\applicationContext.xml");
+    context=new ClassPathXmlApplicationContext("file:C:\\Users\\I342400\\Documents\\GitRepository\\ProtalTest1.0\\web\\WEB-INF\\applicationContext.xml");
     user=(User) context.getBean("user");
     user.setUser_name("JerryLiang");
     user.setUser_type("admin");

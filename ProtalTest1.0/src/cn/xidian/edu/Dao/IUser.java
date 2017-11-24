@@ -1,6 +1,6 @@
-package cn.xidian.edu;
+package cn.xidian.edu.Dao;
 
-import cn.xidian.edu.Dao.User;
+import cn.xidian.edu.Bean.User;
 
 import java.util.List;
 

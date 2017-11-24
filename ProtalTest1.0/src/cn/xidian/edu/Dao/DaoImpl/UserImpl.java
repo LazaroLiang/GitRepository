@@ -1,7 +1,7 @@
-package cn.xidian.edu.DaoImpl;
+package cn.xidian.edu.Dao.DaoImpl;
 
-import cn.xidian.edu.Dao.User;
-import cn.xidian.edu.IUser;
+import cn.xidian.edu.Bean.User;
+import cn.xidian.edu.Dao.IUser;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 

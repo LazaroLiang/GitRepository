@@ -5,4 +5,9 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
+    <package name="hello" extends="struts-default" namespace="/">
+        <action name="hello" class="cn.xidian.edu.Action.ActionTest">
+            <result name="ok">/hello.jsp</result>
+        </action>
+    </package>
 </struts>

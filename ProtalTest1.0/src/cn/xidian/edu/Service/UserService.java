@@ -1,7 +1,7 @@
 package cn.xidian.edu.Service;
 
-import cn.xidian.edu.Dao.User;
-import cn.xidian.edu.DaoImpl.UserImpl;
+import cn.xidian.edu.Bean.User;
+import cn.xidian.edu.Dao.DaoImpl.UserImpl;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
