@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="HotelManage">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/images"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/image"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/extjs"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebRoot/extjs"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebRoot/css"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebRoot/js/frontdesk"/>
+        <property name="context-root" value="/HotelManage"/>
+        <property name="java-output-path" value="/HotelManage/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>
